@@ -7,4 +7,20 @@
 # Given nums = [3,2,2,3], val = 3,
 # Your function should return length = 2, with the first two elements of nums being 2
 
+class Solution(object):
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        n = len(nums)
+        j = 0
+        while j < n:
+            if nums[j] == val:
+                nums.pop(j)
+                n = len(nums)
+            else:
+                j = j + 1
 
+        return len(nums)
